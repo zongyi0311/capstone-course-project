@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import io from "socket.io-client";
 
-const API = "http://192.168.0.161:8080";
+const API = import.meta.env.VITE_API_BASE_URL || "/api";
+
 
 export default function App() {
   const [roomId, setRoomId] = useState("demo");
